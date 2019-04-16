@@ -61,9 +61,13 @@ function Puissance4 () {
 
   Puissance4.prototype.checkWinner = function () {
     let winner = false;
-    for (let i = 0; i < 6 && !winner; i++) {
+    for (let i = 0; i < 7 && !winner; i++) {
       winner = this.checkWinnerColonne(i)
     }
+    if(!winner) {
+      winner = this.checkWinnerLigne(5);
+    }
+
     return winner;
   }
 
@@ -74,6 +78,19 @@ function Puissance4 () {
     }
 
     if (contenuColonneAplati.includes('RRRR') || contenuColonneAplati.includes('YYYY')) {
+      return true
+    }
+    return false
+  }
+
+  Puissance4.prototype.checkWinnerLigne= function (ligne) {
+    let contenuAplati = '';
+
+    for (let i = 0; i < 6; i++) {
+      contenuAplati = contenuAplati + this.tab[ligne][i];
+    }
+    console.log(`ligne ${contenuAplati}`)
+    if (contenuAplati.includes('RRRR') || contenuAplati.includes('YYYY')) {
       return true
     }
     return false
