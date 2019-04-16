@@ -109,9 +109,6 @@ QUnit.test( "joueur gagnant sur une colonne ", function( assert ) {
 	assert.equal( puissance4.checkWinner(), true, "Gagnant sur la 3eme colonne" );
 });
 
-
-
-
 QUnit.test( "joueur gagnant sur la ligne du bas ", function( assert ) {
 	var puissance4 = new Puissance4();
 	puissance4.play(0); // R
@@ -123,4 +120,20 @@ QUnit.test( "joueur gagnant sur la ligne du bas ", function( assert ) {
 	puissance4.play(3);	// R
 
 	assert.equal( puissance4.checkWinner(), true, "Gagnant sur la ligne du bas" );
+});
+
+QUnit.test( "joueur gagnant sur une ligne", function( assert ) {
+	var puissance4 = new Puissance4();
+	puissance4.play(0); // R
+	puissance4.play(0); // Y
+	puissance4.play(1); // R
+	puissance4.play(1);	// Y
+	puissance4.play(2);	// R
+	puissance4.play(2);	// Y
+	puissance4.play(0);	// R
+	puissance4.play(3);	// Y
+	puissance4.play(1); // R
+	puissance4.play(3);	// Y
+
+	assert.equal( puissance4.checkWinner(), true, "Gagnant sur une ligne" );
 });
