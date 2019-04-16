@@ -37,13 +37,8 @@ function Puissance4 () {
 
   /** Play */
   Puissance4.prototype.play = function (colonne) {
-    let lastline = 5;
-    for (let i = 5; i > 0; i--) {
-      if (this.tab[i][colonne] != "") {
-        lastline--
-      }
-    }
-    this.tab[lastline][colonne] = this.player;
+
+    this.tab[this.premiereCaseVide(colonne)][colonne]= this.player;
 
     //@TODO check if there is a winner. Ex:
     //this.checkWinner();
@@ -54,7 +49,13 @@ function Puissance4 () {
   }
 
   Puissance4.prototype.premiereCaseVide = function (colonne) {
-
+    let lastline = 5;
+    for (let i = 5; i > 0; i--) {
+      if (this.tab[i][colonne] != "") {
+        lastline--
+      }
+    }
+    return lastline;
   }
 
 
