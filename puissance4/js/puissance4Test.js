@@ -54,10 +54,15 @@ QUnit.test( "les jetons s'empilent correctement", function( assert ) {
 
 QUnit.test( "detection de la premiere case vide", function( assert ) {
 	var puissance4 = new Puissance4();
-	// TODO
+	puissance4.play(0);
+	puissance4.play(0);
+	puissance4.play(0);
+	puissance4.play(0);
 
-	// puissance4.premiereCaseVide()
-
+	assert.equal( puissance4.premiereCaseVide(0), 1, "Passed!" );
 });
 
 
+QUnit.test( "joueur gagnant sur la premier colonne", function( assert ) {
+	// todo
+});
