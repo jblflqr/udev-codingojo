@@ -58,5 +58,8 @@ function Puissance4 () {
     return lastline;
   }
 
+  Puissance4.prototype.checkWinner = function (colonne) {
+    return true;
+  }
 
 }
