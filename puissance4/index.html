@@ -1,0 +1,193 @@
+ <!doctype html>
+ <html >
+    <head>
+    <title>Puissance4</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap-responsive.css" rel="stylesheet">
+	<link href="css/puissance4.css" rel="stylesheet">
+	
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="ico/apple-touch-icon-57-precomposed.png">
+	<link rel="shortcut icon" href="ico/favicon.png">
+    </head>
+  <body >
+	<!-- NavBar-->
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="brand" href="#">CodingDojo</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+				<li class="active"><a href="#">Home</a></li>
+				<li><a href="#about">About</a></li>
+				<li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+	<!-- /NavBar -->
+	<div class="container-fluid">
+		<div class="row-fluid">
+			<div class="span2">
+				<div class="well sidebar-nav">
+					<ul class="nav nav-list">
+						<li class="nav-header">Coding Dojo</li>
+						<li><a
+							href="http://lmgtfy.com/?q=puissance+4"
+							target="blank">Puissance4 (7x6)</a></li>
+											
+						<hr>
+						<li class="nav-header">Ressources</li>
+						<li><a
+							href="http://jquery.com/"
+							target="blank">JQuery</a></li>
+							<li><a
+							href="http://qunitjs.com/"
+							target="blank">QUnitjs</a></li>	
+						<li class="nav-header">@TODO</li>
+						<ol>
+						<li>Gestion des colonnes</li>
+						<li>Algo de detection des victoires</li>	
+						<li>IA </li>	
+						</ol>
+					</ul>
+				</div>
+				<!--/.well -->
+			</div>
+			
+			<div class="span6">
+				<div class="well sidebar-nav" >
+					<h1>Puissance4 <div id="player" > </div></h1>
+					<!--<div>joueur1:&nbsp;IA&nbsp;<input type="checkbox" name="ia1" id="ia1" value="IA"> </div>-->
+					<div>joueur2:&nbsp;IA&nbsp;<input type="checkbox" name="ia2" id="ia2" value="IA"> </div>
+					<hr/> 
+					<table class="table table-bordered text-center">
+						<tr>
+							<td><a id="btn0" class="btn btn-small" href="#Puissance4"><i class=" icon-download-alt"></i></a></td>
+							<td><a id="btn1" class="btn btn-small" href="#Puissance4"><i class=" icon-download-alt"></i></a></td>
+							<td><a id="btn2" class="btn btn-small" href="#Puissance4"><i class=" icon-download-alt"></i></a></td>
+							<td><a id="btn3" class="btn btn-small" href="#Puissance4"><i class=" icon-download-alt"></i></a></td>
+							<td><a id="btn4" class="btn btn-small" href="#Puissance4"><i class=" icon-download-alt"></i></a></td>
+							<td><a id="btn5" class="btn btn-small" href="#Puissance4"><i class=" icon-download-alt"></i></a></td>
+							<td><a id="btn6" class="btn btn-small" href="#Puissance4"><i class=" icon-download-alt"></i></a></td>
+						</tr>
+						<tr>
+							<td><div id="00" ></div></td>
+							<td><div id="01" ></div></td>
+							<td><div id="02" ></div></td>
+							<td><div id="03" ></div></td>
+							<td><div id="04" ></div></td>
+							<td><div id="05" ></div></td>
+							<td><div id="06" ></div></td>
+						</tr>
+						<tr>
+							<td><div id="10" ></div></td>
+							<td><div id="11" ></div></td>
+							<td><div id="12" ></div></td>
+							<td><div id="13" ></div></td>
+							<td><div id="14" ></div></td>
+							<td><div id="15" ></div></td>
+							<td><div id="16" ></div></td>
+						</tr>							
+						<tr>
+							<td><div id="20" ></div></td>
+							<td><div id="21" ></div></td>
+							<td><div id="22" ></div></td>
+							<td><div id="23" ></div></td>
+							<td><div id="24" ></div></td>
+							<td><div id="25" ></div></td>
+							<td><div id="26" ></div></td>
+						</tr>
+						<tr>
+							<td><div id="30" ></div></td>
+							<td><div id="31" ></div></td>
+							<td><div id="32" ></div></td>
+							<td><div id="33" ></div></td>
+							<td><div id="34" ></div></td>
+							<td><div id="35" ></div></td>
+							<td><div id="36" ></div></td>
+						</tr>
+						<tr>
+							<td><div id="40" ></div></td>
+							<td><div id="41" ></div></td>
+							<td><div id="42" ></div></td>
+							<td><div id="43" ></div></td>
+							<td><div id="44" ></div></td>
+							<td><div id="45" ></div></td>
+							<td><div id="46" ></div></td>
+						</tr>
+						<tr>
+							<td><div id="50" ></div></td>
+							<td><div id="51" ></div></td>
+							<td><div id="52" ></div></td>
+							<td><div id="53" ></div></td>
+							<td><div id="54" ></div></td>
+							<td><div id="55" ></div></td>
+							<td><div id="56" ></div></td>
+						</tr>						
+
+						
+					</table>
+				   
+				</div>
+			</div>
+			
+			<div class="span4">
+				<div class="well sidebar-nav" >
+					<ul class="nav nav-list">
+							
+						<li class="nav-header">Unit Test result</li>
+						<li><a
+							href="puissance4Test.html"
+							target="blank">puissance4Test.html</a></li>		
+					</ul>
+					 <iframe src="puissance4Test.html" height="700px" frameborder="0"></iframe> 
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--/row-->
+	</div>
+	<!--/row-->
+	<hr>
+      <footer>
+        <p>&nbsp; CGI &nbsp;&copy; 2015 - CodingDojo 2015</p>
+      </footer>
+
+    </div><!--/.fluid-container-->
+
+	<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-header">
+		<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+		<h3 id="myModalLabel">Win!</h3>
+		</div>
+		<div class="modal-body">
+		<p><img src="img/win.gif"></p>
+		</div>
+		<div class="modal-footer">
+		<button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+		</div>
+	</div>
+	
+	<script src="js/jquery.js"></script>
+	<script src="js/bootstrap-modal.js"></script>
+	<script src="js/puissance4.js"></script>
+	<script src="js/puissance4UI.js"></script>
+
+  </body>
+</html>
+

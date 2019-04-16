@@ -1,0 +1,28 @@
+body {
+        padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+}
+
+.table td {
+   text-align: center;   
+}
+
+.vAnimation {
+	position: relative;
+	animation: verticalAnim 1s;	
+}
+
+.hAnimation {
+	position: relative;
+	animation: horizontalAnim 1s;
+}
+
+@keyframes verticalAnim {
+    0%   {top:-200px;}
+    100% {top:40px;}
+}
+
+@keyframes horizontalAnim {
+    0%   {background:gray;left:200px;}
+    100% {background:gray;left:0px;}
+}
+
