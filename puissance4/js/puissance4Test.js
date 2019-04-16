@@ -74,6 +74,23 @@ QUnit.test( "joueur gagnant sur la premier colonne", function( assert ) {
 	puissance4.play(0);	// R
 
 	assert.equal( puissance4.checkWinner(0), true, "Gagnant sur la première colonne" );
-	assert.equal( puissance4.checkWinner(1), false, "Gagnant sur la première colonne" );
+	assert.equal( puissance4.checkWinner(1), false, "Perdant sur la seconde colonne" );
+
+});
+
+
+
+QUnit.test( "joueur gagnant sur la premier colonne avec 4 jetons consecutifs", function( assert ) {
+	var puissance4 = new Puissance4();
+	puissance4.play(0); // R
+	puissance4.play(1); // Y
+	puissance4.play(0); // R
+	puissance4.play(0);	// Y
+	puissance4.play(0);	// R
+	puissance4.play(1);	// Y
+	puissance4.play(0);	// R
+
+	assert.equal( puissance4.checkWinner(0), false, "Perdant sur la première colonne" );
+	assert.equal( puissance4.checkWinner(1), false, "Perdant sur la seconde colonne" );
 
 });
