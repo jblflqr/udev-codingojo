@@ -63,7 +63,7 @@ QUnit.test( "detection de la premiere case vide", function( assert ) {
 });
 
 
-QUnit.test( "joueur gagnant sur la premier colonne", function( assert ) {
+QUnit.test( "joueur gagnant sur la premiere colonne", function( assert ) {
 	var puissance4 = new Puissance4();
 	puissance4.play(0); // R
 	puissance4.play(1); // Y
@@ -73,8 +73,8 @@ QUnit.test( "joueur gagnant sur la premier colonne", function( assert ) {
 	puissance4.play(1);	// Y
 	puissance4.play(0);	// R
 
-	assert.equal( puissance4.checkWinner(0), true, "Gagnant sur la première colonne" );
-	assert.equal( puissance4.checkWinner(1), false, "Perdant sur la seconde colonne" );
+	assert.equal( puissance4.checkWinnerColonne(0), true, "Gagnant sur la première colonne" );
+	assert.equal( puissance4.checkWinnerColonne(1), false, "Perdant sur la seconde colonne" );
 
 });
 
@@ -90,7 +90,37 @@ QUnit.test( "joueur perdant si aucun 4 jeton consecutif", function( assert ) {
 	puissance4.play(1);	// Y
 	puissance4.play(0);	// R
 
-	assert.equal( puissance4.checkWinner(0), false, "Perdant sur la première colonne" );
-	assert.equal( puissance4.checkWinner(1), false, "Perdant sur la seconde colonne" );
+	assert.equal( puissance4.checkWinnerColonne(0), false, "Gagnant sur la première colonne" );
+	assert.equal( puissance4.checkWinnerColonne(1), false, "Perdant sur la seconde colonne" );
 
+});
+
+
+QUnit.test( "joueur gagnant sur une colonne ", function( assert ) {
+	var puissance4 = new Puissance4();
+	puissance4.play(3); // R
+	puissance4.play(1); // Y
+	puissance4.play(3); // R
+	puissance4.play(1);	// Y
+	puissance4.play(3);	// R
+	puissance4.play(1);	// Y
+	puissance4.play(3);	// R
+
+	assert.equal( puissance4.checkWinner(), true, "Gagnant sur la 3eme colonne" );
+});
+
+
+
+
+QUnit.test( "joueur gagnant sur la ligne du bas ", function( assert ) {
+	var puissance4 = new Puissance4();
+	puissance4.play(0); // R
+	puissance4.play(0); // Y
+	puissance4.play(1); // R
+	puissance4.play(1);	// Y
+	puissance4.play(2);	// R
+	puissance4.play(2);	// Y
+	puissance4.play(3);	// R
+
+	assert.equal( puissance4.checkWinner(), true, "Gagnant sur la ligne du bas" );
 });
