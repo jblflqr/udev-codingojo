@@ -65,7 +65,9 @@ function Puissance4 () {
       winner = this.checkWinnerColonne(i)
     }
     if(!winner) {
-      winner = this.checkWinnerLigne(5);
+      for (let i = 5; i > 0 && !winner; i--) {
+        winner = this.checkWinnerLigne(i)
+      }
     }
 
     return winner;
