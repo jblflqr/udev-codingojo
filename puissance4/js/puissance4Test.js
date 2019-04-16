@@ -43,3 +43,11 @@ QUnit.test( "play test: play 1st colonne with red", function( assert ) {
 });
 
 
+QUnit.test( "les jetons s'empilent correctement", function( assert ) {
+	var puissance4 = new Puissance4();
+	puissance4.play(0);
+	puissance4.play(0);
+	assert.equal( puissance4.tab[5][0], "R", "Passed!" );
+	assert.equal( puissance4.tab[4][0], "Y", "Passed!" );
+
+});
