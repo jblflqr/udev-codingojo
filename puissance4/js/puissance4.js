@@ -91,8 +91,21 @@ function Puissance4 () {
     for (let i = 0; i < 6; i++) {
       contenuAplati = contenuAplati + this.tab[ligne][i];
     }
-    console.log(`ligne ${contenuAplati}`)
     if (contenuAplati.includes('RRRR') || contenuAplati.includes('YYYY')) {
+      return true
+    }
+    return false
+  }
+
+  Puissance4.prototype.checkWinnerDiagonale= function (ligne, colonne) {
+    let aplati = '';
+    let iteration = 4;
+
+    for(let i = 0; i < 4; i++) {
+      aplati+=this.tab[ligne+i][colonne+i];
+    }
+
+    if (aplati.includes('RRRR') || aplati.includes('YYYY')) {
       return true
     }
     return false
