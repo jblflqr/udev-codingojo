@@ -38,7 +38,7 @@ function Puissance4 () {
   /** Play */
   Puissance4.prototype.play = function (colonne) {
 
-    this.tab[this.premiereCaseVide(colonne)][colonne]= this.player;
+    this.tab[this.premiereCaseVide(colonne)][colonne] = this.player;
 
     //@TODO check if there is a winner. Ex:
     //this.checkWinner();
@@ -59,24 +59,17 @@ function Puissance4 () {
   }
 
   Puissance4.prototype.checkWinner = function (colonne) {
-    let jetonsRouges = 0;
-    let jetonsJaunes = 0;
-
-    for (let i = 5; i > 0; i--) {
-      if (this.tab[i][colonne] == "R") {
-        jetonsRouges = jetonsRouges + 1;
-      } else {
-        if(this.tab[i][colonne] == "Y") {
-          jetonsJaunes = jetonsJaunes + 1;
-        }
-      }
+    let contenuColonneAplati = '';
+    for(let i=5; i > 0; i--) {
+      contenuColonneAplati = contenuColonneAplati + this.tab[i][colonne];
     }
 
-    if(jetonsJaunes == 4 || jetonsRouges == 4) {
-      return true;
-    } else {
-      return false;
+    if(contenuColonneAplati.includes('RRRR') || contenuColonneAplati.includes('YYYY')) {
+      return true
     }
+    return false
   }
+
+
 
 }
