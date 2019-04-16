@@ -137,3 +137,34 @@ QUnit.test( "joueur gagnant sur une ligne", function( assert ) {
 
 	assert.equal( puissance4.checkWinner(), true, "Gagnant sur une ligne" );
 });
+
+
+QUnit.test( "joueur gagnant sur une diagonale", function( assert ) {
+	var puissance4 = new Puissance4();
+	//2 y r
+	//3 r y
+	//4 y r y r
+	//5 r r y y
+	//  0 1 2 3
+
+	// 2 0 3 1 4 2 5 3
+	puissance4.play(0); // R
+	puissance4.play(0); // Y
+	puissance4.play(0); // R
+	puissance4.play(0); // Y
+
+	puissance4.play(1); // R
+	puissance4.play(2); // Y
+	puissance4.play(1); // R
+	puissance4.play(1); // Y
+
+	puissance4.play(1); // R
+	puissance4.play(3); // Y
+
+	puissance4.play(3);	// R
+	puissance4.play(2);	// Y
+	console.log(Puissance4.tab)
+
+
+	assert.equal( puissance4.checkWinnerDiagonale(2,0), true, "Gagnant sur une diagonale" );
+});
