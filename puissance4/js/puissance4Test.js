@@ -80,7 +80,7 @@ QUnit.test( "joueur gagnant sur la premier colonne", function( assert ) {
 
 
 
-QUnit.test( "joueur gagnant sur la premier colonne avec 4 jetons consecutifs", function( assert ) {
+QUnit.test( "joueur perdant si aucun 4 jeton consecutif", function( assert ) {
 	var puissance4 = new Puissance4();
 	puissance4.play(0); // R
 	puissance4.play(1); // Y
