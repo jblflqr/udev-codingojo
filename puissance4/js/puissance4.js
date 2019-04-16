@@ -41,7 +41,8 @@ function Puissance4 () {
     this.tab[this.premiereCaseVide(colonne)][colonne] = this.player;
 
     //@TODO check if there is a winner. Ex:
-    //this.checkWinner();
+    let thereIsAWinner = this.checkWinner();
+    if(thereIsAWinner) this.winner = this.player;
 
     this.changePlayer();
 
