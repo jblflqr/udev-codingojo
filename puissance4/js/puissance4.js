@@ -59,7 +59,24 @@ function Puissance4 () {
   }
 
   Puissance4.prototype.checkWinner = function (colonne) {
-    return true;
+    let jetonsRouges = 0;
+    let jetonsJaunes = 0;
+
+    for (let i = 5; i > 0; i--) {
+      if (this.tab[i][colonne] == "R") {
+        jetonsRouges = jetonsRouges + 1;
+      } else {
+        if(this.tab[i][colonne] == "Y") {
+          jetonsJaunes = jetonsJaunes + 1;
+        }
+      }
+    }
+
+    if(jetonsJaunes == 4 || jetonsRouges == 4) {
+      return true;
+    } else {
+      return false;
+    }
   }
 
 }
