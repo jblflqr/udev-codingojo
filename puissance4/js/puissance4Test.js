@@ -51,3 +51,13 @@ QUnit.test( "les jetons s'empilent correctement", function( assert ) {
 	assert.equal( puissance4.tab[4][0], "Y", "Passed!" );
 
 });
+
+QUnit.test( "detection de la premiere case vide", function( assert ) {
+	var puissance4 = new Puissance4();
+	// TODO
+
+	// puissance4.premiereCaseVide()
+
+});
+
+
