@@ -58,18 +58,24 @@ function Puissance4 () {
     return lastline;
   }
 
-  Puissance4.prototype.checkWinner = function (colonne) {
+  Puissance4.prototype.checkWinner = function () {
+    let winner = false;
+    for (let i = 0; i < 6 && !winner; i++) {
+      winner = this.checkWinnerColonne(i)
+    }
+    return winner;
+  }
+
+  Puissance4.prototype.checkWinnerColonne = function (colonne) {
     let contenuColonneAplati = '';
-    for(let i=5; i > 0; i--) {
+    for (let i = 5; i > 0; i--) {
       contenuColonneAplati = contenuColonneAplati + this.tab[i][colonne];
     }
 
-    if(contenuColonneAplati.includes('RRRR') || contenuColonneAplati.includes('YYYY')) {
+    if (contenuColonneAplati.includes('RRRR') || contenuColonneAplati.includes('YYYY')) {
       return true
     }
     return false
   }
-
-
 
 }
